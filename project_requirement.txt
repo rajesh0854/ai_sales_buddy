@@ -1,0 +1,123 @@
+application name: ai sales buddy
+domain: banking
+end users: bank sales team
+
+why this application: in banks, they use ml models which analyses various customer information and generates prdictions of which
+of the product can be recommended to that particular user. this recommendation details will be used by sales agent/person.
+sale agent calls customers and try to sell the product and most of the time they fail to do it because they fail to make a 
+effective and personalized sales pitch becuase as human, they cannot or difficult analyse all the information of the customer to create 
+most effective personalized sales pitch.
+so the idea is to use llm models to analyse these product recommendations and various customer information to tailor a very 
+effective and personalzied sale pitch script so that sales agent can use it to make effective conversation and sales.
+
+this is mainly to help sales agent and to boost sales.
+
+application features:
+1. sales pitch script generation (telecalling/face to face conversations):
+- analyse informations such as age, work, demographic, existing productios, transaction patters, etc.
+- analyse the products which is recommended to the customer (production recommendation by existing ML/AI models).
+- analyse any other information required to generate personalized sales pitch script generation.
+- generate highly impactfull personalized sales pitch script using integrated llm model such as gemini/claude or openai models.
+- sales team should be able to use generated sales pitch script for more impactfull and effective conversation with the 
+	customers.
+
+2. dynamic script controls:
+- during the sales team - customer conversation, sometimes script may need changes based on the conversation. for example during 
+	conversation if customer says that he/she already using the product which sales team tying to pitch from other bank, in this case
+	the script need changes on the fly. we may need multiple such controls for handling different situation that might come.
+- need to add all such dynamic script controls so that, script can be altered in real time so that sales team can use it effectively.
+- during personalized, sales pitch script generation, it should also include scripts for handling different scenartios so that,
+	instead of re-generating the whole script, we can simply load the script.
+
+3. product eligibility checker:
+- the product recommendation needs to be validated with product policy documents to  make sure that the recommeded product is elgible to user
+	other wise we should say, this user is not eligible to use the product becuase of these reasons.
+
+4. quick chatbot:
+- when customer asks something during conversarion and if the sales person is not knowledgable or not aware of the information,
+	they should use the chtabot to quickly get the response. for example, if the customer wants to know what is the current ROI for homeloan
+	for tenure 5 years and if sales person is not aware of it, he can quickly open the chatboot, asks question and get the response 
+	from the chatbot which he can use to answer to the customer.
+- the chatbot should understand keyword based questions. instead of asking what is the rate of interest for homeloan, if the user
+	simply asks "home loan roi", the chatbot should understand it.
+- even the response from the chatbot should be in the form which sales person can use it directlty to answer to the customer instead of rephrsing it
+	building his own sentence to answer it. even the response should be personalized to the customer.
+- chatbot should also supports products comparision - sale person shoudl be able to compare two different products of the same bank
+	and generate personalized recommendations to customer which includes products pros, cons and final personalized recommendations
+	to customer (here also the response should contain sales pitch).
+- chatbot also suggests recomeeded questions which sales person can directy select it instead of typing it. (customer personalized suggested questions).
+
+
+5. notes & follow ups
+- the sale person should be able to take notes, followup details or if the customer want call back at specific day and time, etc.
+- convert notes into ai intelligence and create notifications, events etc.
+
+
+6. send email/whats app message of the recommended product detailsalong wuith information which customer wants to know) - personalized messgae.
+
+Other features:
+1. customizable sales pitch script template:
+- should be able to customize or sales pitch template and this template will be used to generate personalized sales pitch script for the recommended product.
+- should be able to define rules, pitch techniques/guidelines etc in the template.
+- should be able to create different templates with names.
+
+2. feedback for the sales pitch  script.
+- at the end of the genrated personalized sales pitch script, it should ask for feedback along with ratings.
+- system should use these feedbacks to analyse and generate instructions to improve quality of the sales pitch script.
+- record the feedbacks and the genrated instructions to improve the script and once in a while admin can use those instructions to genrate guide/suggestions 
+	which can be incoroporate to sale pitch template.
+
+3. since you are the expert, i want you add 2-4 other higly important features and functionalities which takes this application to next level.
+
+Data Source:
+-  since this is a prototype application im creating, i do not have any real data so i want to create mock data for everything.
+-  mock data you create should look close to how real world bank data would look like.
+-  use indian bank name "EXL bank limited" and use indian customer names.
+-  need to create mock data for customers, personal and demographic info, multiple different bank products and detailed descriptions, their policy documents of
+	eligibility, transactions data, product recommendations details, etc.
+- you decide what else data we would need.
+- make sure you need to create accurate and close to real world like data. should not feel like mock data.
+- usually in banks, not all data comes from same source system. some data comes from CRM, some data from different sources, tables. so keep in mind on this.
+
+
+backend:
+- keep all the backend reated code in the folder "backend"
+- use python and fast api
+- use sqlite databse - create required tables also create ddl file for each table.(update it when you make any changes)
+- create python venv and install required libs. create requirements.txt file also.
+- use .env and keep required configurations
+- i want to use google's gemini api key and the model is gemini-flash-lite-latest.
+
+frontend:
+- keep all frontend related code in frontend dir.
+- use next js/vanila/d3/etc.
+- create .env.local file and keep required configs. do not hardocde the api url instead configure it in the .env.local file.
+
+UI, Design & Styling:
+- create a beautiful and stunning landing page. in the same page, provide option to user login.no need to implment signup, reset etc. just login.
+- create a visually stunning, moder and beautiful web application.
+- be creative in every aspect of ui designing to create most beautiful and stunning application.
+- use cool animations wherever is possible. make use of react bits and other components.
+- use beautiful white theme. i do not suggest dark theme.
+- i will let you decide to choose which frameworks, tools, libraries, components you need to make this application look most beautiful and stunning modern application.
+- since this is prototype, the better it looks, the easier to make this application sellable. think from that perspective.
+- every functionality should work flawlessly and smoothly.
+
+other instructions:
+- no need to implment titght security features such as password encryption, password complexity, jwt token etc.
+- no need to worry about security as this is a prototype application
+- keep mock data/prompts/etc in separate folder to that its easy to debug and modify.
+- use best/simle folder structure for the code base.
+
+
+implementation planning:
+i want you understand the project requirements clearly and create a proper plan to implment in multiple phases.
+use my bellow suggestions:
+phease 1 - > mock data creation
+phase 2 - backend development
+phase 3 - frontend development
+phase 4 - verify ui design, styling to make sure its the BEST.
+
+create a detailed plan for each of the above phases. if you think above phase plan is not good, feel free to modify it.
+whatver you implement, keep track in a file such as in every phase what is implments, what needs to be implment, etc so that it will
+guide you to make sure you are in sync and right track.

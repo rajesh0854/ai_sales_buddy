@@ -1,0 +1,302 @@
+[
+  {
+    "feedback_id": "FBK00001",
+    "script_id": "SCR00001",
+    "agent_id": "USR003",
+    "rating": 4,
+    "outcome": "Interested",
+    "comments": "Objection handling section was very useful.",
+    "improvement_instruction": "",
+    "created_at": "2026-05-19"
+  },
+  {
+    "feedback_id": "FBK00002",
+    "script_id": "SCR00002",
+    "agent_id": "USR001",
+    "rating": 4,
+    "outcome": "Interested",
+    "comments": "Customer appreciated the tailored numbers.",
+    "improvement_instruction": "",
+    "created_at": "2026-06-27"
+  },
+  {
+    "feedback_id": "FBK00003",
+    "script_id": "SCR00003",
+    "agent_id": "USR001",
+    "rating": 5,
+    "outcome": "No Answer",
+    "comments": "Customer already had the product elsewhere.",
+    "improvement_instruction": "",
+    "created_at": "2026-05-16"
+  },
+  {
+    "feedback_id": "FBK00004",
+    "script_id": "SCR00004",
+    "agent_id": "USR001",
+    "rating": 4,
+    "outcome": "Callback",
+    "comments": "Too long, need a crisper version.",
+    "improvement_instruction": "",
+    "created_at": "2026-05-19"
+  },
+  {
+    "feedback_id": "FBK00005",
+    "script_id": "SCR00005",
+    "agent_id": "USR003",
+    "rating": 2,
+    "outcome": "Callback",
+    "comments": "Too long, need a crisper version.",
+    "improvement_instruction": "",
+    "created_at": "2026-07-03"
+  },
+  {
+    "feedback_id": "FBK00006",
+    "script_id": "SCR00006",
+    "agent_id": "USR001",
+    "rating": 3,
+    "outcome": "Interested",
+    "comments": "Customer already had the product elsewhere.",
+    "improvement_instruction": "",
+    "created_at": "2026-06-07"
+  },
+  {
+    "feedback_id": "FBK00007",
+    "script_id": "SCR00007",
+    "agent_id": "USR001",
+    "rating": 5,
+    "outcome": "Interested",
+    "comments": "Great hook, closed the call positively.",
+    "improvement_instruction": "",
+    "created_at": "2026-06-06"
+  },
+  {
+    "feedback_id": "FBK00008",
+    "script_id": "SCR00008",
+    "agent_id": "USR002",
+    "rating": 5,
+    "outcome": "Converted",
+    "comments": "Great hook, closed the call positively.",
+    "improvement_instruction": "",
+    "created_at": "2026-06-26"
+  },
+  {
+    "feedback_id": "FBK00009",
+    "script_id": "SCR00009",
+    "agent_id": "USR001",
+    "rating": 3,
+    "outcome": "Interested",
+    "comments": "Too long, need a crisper version.",
+    "improvement_instruction": "",
+    "created_at": "2026-05-29"
+  },
+  {
+    "feedback_id": "FBK00010",
+    "script_id": "SCR00010",
+    "agent_id": "USR001",
+    "rating": 3,
+    "outcome": "Interested",
+    "comments": "Pitch felt natural and personalized.",
+    "improvement_instruction": "",
+    "created_at": "2026-06-21"
+  },
+  {
+    "feedback_id": "FBK00011",
+    "script_id": "SCR00011",
+    "agent_id": "USR001",
+    "rating": 4,
+    "outcome": "Rejected",
+    "comments": "Customer already had the product elsewhere.",
+    "improvement_instruction": "",
+    "created_at": "2026-07-06"
+  },
+  {
+    "feedback_id": "FBK00012",
+    "script_id": "SCR00012",
+    "agent_id": "USR001",
+    "rating": 3,
+    "outcome": "Interested",
+    "comments": "Too long, need a crisper version.",
+    "improvement_instruction": "",
+    "created_at": "2026-07-13"
+  },
+  {
+    "feedback_id": "FBK00013",
+    "script_id": "SCR00013",
+    "agent_id": "USR002",
+    "rating": 3,
+    "outcome": "Interested",
+    "comments": "Great hook, closed the call positively.",
+    "improvement_instruction": "",
+    "created_at": "2026-07-13"
+  },
+  {
+    "feedback_id": "FBK00014",
+    "script_id": "SCR00014",
+    "agent_id": "USR001",
+    "rating": 2,
+    "outcome": "No Answer",
+    "comments": "Too long, need a crisper version.",
+    "improvement_instruction": "",
+    "created_at": "2026-07-12"
+  },
+  {
+    "feedback_id": "FBK00015",
+    "script_id": "SCR00015",
+    "agent_id": "USR003",
+    "rating": 5,
+    "outcome": "Converted",
+    "comments": "Objection handling section was very useful.",
+    "improvement_instruction": "",
+    "created_at": "2026-06-29"
+  },
+  {
+    "feedback_id": "FBK00016",
+    "script_id": "SCR00016",
+    "agent_id": "USR002",
+    "rating": 5,
+    "outcome": "Interested",
+    "comments": "Customer already had the product elsewhere.",
+    "improvement_instruction": "",
+    "created_at": "2026-07-03"
+  },
+  {
+    "feedback_id": "FBK00017",
+    "script_id": "SCR00017",
+    "agent_id": "USR003",
+    "rating": 3,
+    "outcome": "No Answer",
+    "comments": "Too long, need a crisper version.",
+    "improvement_instruction": "",
+    "created_at": "2026-07-10"
+  },
+  {
+    "feedback_id": "FBK00018",
+    "script_id": "SCR00018",
+    "agent_id": "USR001",
+    "rating": 4,
+    "outcome": "Callback",
+    "comments": "Objection handling section was very useful.",
+    "improvement_instruction": "",
+    "created_at": "2026-06-25"
+  },
+  {
+    "feedback_id": "FBK00019",
+    "script_id": "SCR00019",
+    "agent_id": "USR002",
+    "rating": 4,
+    "outcome": "Rejected",
+    "comments": "Customer appreciated the tailored numbers.",
+    "improvement_instruction": "",
+    "created_at": "2026-05-20"
+  },
+  {
+    "feedback_id": "FBK00020",
+    "script_id": "SCR00020",
+    "agent_id": "USR001",
+    "rating": 5,
+    "outcome": "Rejected",
+    "comments": "Customer already had the product elsewhere.",
+    "improvement_instruction": "",
+    "created_at": "2026-07-10"
+  },
+  {
+    "feedback_id": "FBK00021",
+    "script_id": "SCR00021",
+    "agent_id": "USR002",
+    "rating": 5,
+    "outcome": "Callback",
+    "comments": "Great hook, closed the call positively.",
+    "improvement_instruction": "",
+    "created_at": "2026-05-21"
+  },
+  {
+    "feedback_id": "FBK00022",
+    "script_id": "SCR00022",
+    "agent_id": "USR003",
+    "rating": 5,
+    "outcome": "No Answer",
+    "comments": "Pitch felt natural and personalized.",
+    "improvement_instruction": "",
+    "created_at": "2026-05-18"
+  },
+  {
+    "feedback_id": "FBK00023",
+    "script_id": "SCR00023",
+    "agent_id": "USR003",
+    "rating": 4,
+    "outcome": "Converted",
+    "comments": "Objection handling section was very useful.",
+    "improvement_instruction": "",
+    "created_at": "2026-06-22"
+  },
+  {
+    "feedback_id": "FBK00024",
+    "script_id": "SCR00024",
+    "agent_id": "USR003",
+    "rating": 3,
+    "outcome": "Callback",
+    "comments": "Too long, need a crisper version.",
+    "improvement_instruction": "",
+    "created_at": "2026-06-20"
+  },
+  {
+    "feedback_id": "FBK00025",
+    "script_id": "SCR00025",
+    "agent_id": "USR003",
+    "rating": 5,
+    "outcome": "Interested",
+    "comments": "Objection handling section was very useful.",
+    "improvement_instruction": "",
+    "created_at": "2026-07-09"
+  },
+  {
+    "feedback_id": "FBK00026",
+    "script_id": "SCR00026",
+    "agent_id": "USR003",
+    "rating": 4,
+    "outcome": "Converted",
+    "comments": "Great hook, closed the call positively.",
+    "improvement_instruction": "",
+    "created_at": "2026-06-01"
+  },
+  {
+    "feedback_id": "FBK00027",
+    "script_id": "SCR00027",
+    "agent_id": "USR001",
+    "rating": 4,
+    "outcome": "Interested",
+    "comments": "Customer appreciated the tailored numbers.",
+    "improvement_instruction": "",
+    "created_at": "2026-05-17"
+  },
+  {
+    "feedback_id": "FBK00028",
+    "script_id": "SCR00028",
+    "agent_id": "USR002",
+    "rating": 3,
+    "outcome": "Callback",
+    "comments": "Too long, need a crisper version.",
+    "improvement_instruction": "",
+    "created_at": "2026-06-07"
+  },
+  {
+    "feedback_id": "FBK00029",
+    "script_id": "SCR00029",
+    "agent_id": "USR003",
+    "rating": 5,
+    "outcome": "No Answer",
+    "comments": "Objection handling section was very useful.",
+    "improvement_instruction": "",
+    "created_at": "2026-06-20"
+  },
+  {
+    "feedback_id": "FBK00030",
+    "script_id": "SCR00030",
+    "agent_id": "USR003",
+    "rating": 4,
+    "outcome": "Callback",
+    "comments": "Objection handling section was very useful.",
+    "improvement_instruction": "",
+    "created_at": "2026-07-03"
+  }
+]

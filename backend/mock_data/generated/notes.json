@@ -1,0 +1,202 @@
+[
+  {
+    "note_id": "NOTE0001",
+    "customer_id": "EXLC0035",
+    "agent_id": "USR001",
+    "content": "Customer interested but wants to compare with existing bank offer. Call back next week.",
+    "ai_summary": "",
+    "sentiment": "Negative",
+    "key_points": "[]",
+    "created_at": "2026-07-08"
+  },
+  {
+    "note_id": "NOTE0002",
+    "customer_id": "EXLC0033",
+    "agent_id": "USR002",
+    "content": "Concerned about processing fees. Needs reassurance on transparency.",
+    "ai_summary": "",
+    "sentiment": "Neutral",
+    "key_points": "[]",
+    "created_at": "2026-07-01"
+  },
+  {
+    "note_id": "NOTE0003",
+    "customer_id": "EXLC0011",
+    "agent_id": "USR001",
+    "content": "Very keen on the credit card, requested application link on WhatsApp.",
+    "ai_summary": "",
+    "sentiment": "Neutral",
+    "key_points": "[]",
+    "created_at": "2026-06-15"
+  },
+  {
+    "note_id": "NOTE0004",
+    "customer_id": "EXLC0045",
+    "agent_id": "USR002",
+    "content": "Concerned about processing fees. Needs reassurance on transparency.",
+    "ai_summary": "",
+    "sentiment": "Negative",
+    "key_points": "[]",
+    "created_at": "2026-07-02"
+  },
+  {
+    "note_id": "NOTE0005",
+    "customer_id": "EXLC0050",
+    "agent_id": "USR002",
+    "content": "Concerned about processing fees. Needs reassurance on transparency.",
+    "ai_summary": "",
+    "sentiment": "Positive",
+    "key_points": "[]",
+    "created_at": "2026-06-22"
+  },
+  {
+    "note_id": "NOTE0006",
+    "customer_id": "EXLC0019",
+    "agent_id": "USR002",
+    "content": "Asked about home loan interest rate for 20 years. Wants email with details.",
+    "ai_summary": "",
+    "sentiment": "Negative",
+    "key_points": "[]",
+    "created_at": "2026-06-29"
+  },
+  {
+    "note_id": "NOTE0007",
+    "customer_id": "EXLC0029",
+    "agent_id": "USR003",
+    "content": "Very keen on the credit card, requested application link on WhatsApp.",
+    "ai_summary": "",
+    "sentiment": "Positive",
+    "key_points": "[]",
+    "created_at": "2026-06-21"
+  },
+  {
+    "note_id": "NOTE0008",
+    "customer_id": "EXLC0003",
+    "agent_id": "USR001",
+    "content": "Asked about home loan interest rate for 20 years. Wants email with details.",
+    "ai_summary": "",
+    "sentiment": "Neutral",
+    "key_points": "[]",
+    "created_at": "2026-07-10"
+  },
+  {
+    "note_id": "NOTE0009",
+    "customer_id": "EXLC0022",
+    "agent_id": "USR003",
+    "content": "Very keen on the credit card, requested application link on WhatsApp.",
+    "ai_summary": "",
+    "sentiment": "Positive",
+    "key_points": "[]",
+    "created_at": "2026-06-30"
+  },
+  {
+    "note_id": "NOTE0010",
+    "customer_id": "EXLC0010",
+    "agent_id": "USR001",
+    "content": "Not interested right now, revisit after 3 months.",
+    "ai_summary": "",
+    "sentiment": "Negative",
+    "key_points": "[]",
+    "created_at": "2026-06-30"
+  },
+  {
+    "note_id": "NOTE0011",
+    "customer_id": "EXLC0043",
+    "agent_id": "USR003",
+    "content": "Customer interested but wants to compare with existing bank offer. Call back next week.",
+    "ai_summary": "",
+    "sentiment": "Positive",
+    "key_points": "[]",
+    "created_at": "2026-07-01"
+  },
+  {
+    "note_id": "NOTE0012",
+    "customer_id": "EXLC0016",
+    "agent_id": "USR003",
+    "content": "Concerned about processing fees. Needs reassurance on transparency.",
+    "ai_summary": "",
+    "sentiment": "Positive",
+    "key_points": "[]",
+    "created_at": "2026-07-07"
+  },
+  {
+    "note_id": "NOTE0013",
+    "customer_id": "EXLC0006",
+    "agent_id": "USR002",
+    "content": "Not interested right now, revisit after 3 months.",
+    "ai_summary": "",
+    "sentiment": "Positive",
+    "key_points": "[]",
+    "created_at": "2026-06-18"
+  },
+  {
+    "note_id": "NOTE0014",
+    "customer_id": "EXLC0015",
+    "agent_id": "USR003",
+    "content": "Not interested right now, revisit after 3 months.",
+    "ai_summary": "",
+    "sentiment": "Negative",
+    "key_points": "[]",
+    "created_at": "2026-06-29"
+  },
+  {
+    "note_id": "NOTE0015",
+    "customer_id": "EXLC0048",
+    "agent_id": "USR002",
+    "content": "Very keen on the credit card, requested application link on WhatsApp.",
+    "ai_summary": "",
+    "sentiment": "Positive",
+    "key_points": "[]",
+    "created_at": "2026-07-09"
+  },
+  {
+    "note_id": "NOTE0016",
+    "customer_id": "EXLC0046",
+    "agent_id": "USR003",
+    "content": "Asked about home loan interest rate for 20 years. Wants email with details.",
+    "ai_summary": "",
+    "sentiment": "Positive",
+    "key_points": "[]",
+    "created_at": "2026-06-17"
+  },
+  {
+    "note_id": "NOTE0017",
+    "customer_id": "EXLC0030",
+    "agent_id": "USR002",
+    "content": "Customer interested but wants to compare with existing bank offer. Call back next week.",
+    "ai_summary": "",
+    "sentiment": "Neutral",
+    "key_points": "[]",
+    "created_at": "2026-07-13"
+  },
+  {
+    "note_id": "NOTE0018",
+    "customer_id": "EXLC0038",
+    "agent_id": "USR002",
+    "content": "Asked about home loan interest rate for 20 years. Wants email with details.",
+    "ai_summary": "",
+    "sentiment": "Neutral",
+    "key_points": "[]",
+    "created_at": "2026-07-04"
+  },
+  {
+    "note_id": "NOTE0019",
+    "customer_id": "EXLC0036",
+    "agent_id": "USR002",
+    "content": "Concerned about processing fees. Needs reassurance on transparency.",
+    "ai_summary": "",
+    "sentiment": "Negative",
+    "key_points": "[]",
+    "created_at": "2026-06-29"
+  },
+  {
+    "note_id": "NOTE0020",
+    "customer_id": "EXLC0007",
+    "agent_id": "USR001",
+    "content": "Asked about home loan interest rate for 20 years. Wants email with details.",
+    "ai_summary": "",
+    "sentiment": "Positive",
+    "key_points": "[]",
+    "created_at": "2026-06-20"
+  }
+]
