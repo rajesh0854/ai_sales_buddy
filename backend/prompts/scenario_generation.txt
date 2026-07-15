@@ -12,9 +12,16 @@ Generate ready-to-speak response branches for these common live-call situations:
 4. needs_time           — customer wants time to think / discuss with family
 5. competitor_offer     — customer mentions a specific competing offer
 6. trust_concern        — customer is hesitant about sharing details or trusting the bank
+7. busy_callback        — customer is busy, driving, or wants to speak later
+8. eligibility_doubt    — customer doubts approval eligibility or complains about heavy paperwork
+9. digital_hesitation   — customer is wary of digital channels, prefers physical branch, or fears fraud
+10. benefit_calculation — customer demands concrete financial savings or ROI figures
 
 INSTRUCTIONS
 - Each branch must be a short, natural, ready-to-speak rebuttal/redirect the agent can say immediately.
+- EMPATHY FIRST: Always validate the customer's objection first before pivoting (e.g. "I completely understand that time is premium for you right now..." or "I completely get it, rate is indeed a key factor...").
+- VALUE PIVOT: Refocus from cost/effort to relationship value, exclusive pre-approved terms, and absolute simplicity (e.g. zero paperwork, paperless approval, relationship pricing).
+- RISK-FREE NUDGE: Keep the next action low-friction and low-risk (e.g. "just checking eligibility doesn't impact your CIBIL", or "I'll drop a 30-second summary on WhatsApp").
 - Personalize using the customer's situation where relevant. Stay honest and compliant.
 - Keep each branch to 2-4 sentences.
 

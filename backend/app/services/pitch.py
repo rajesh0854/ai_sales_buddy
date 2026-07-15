@@ -13,7 +13,12 @@ SCENARIO_LABELS = {
     "needs_time": "Needs time to think",
     "competitor_offer": "Mentions a competitor offer",
     "trust_concern": "Trust / hesitation concern",
+    "busy_callback": "Busy / Call back request",
+    "eligibility_doubt": "Eligibility & paperwork doubts",
+    "digital_hesitation": "Prefers branch visit / digital concern",
+    "benefit_calculation": "Show immediate savings / returns",
 }
+
 
 
 def _template(template_id):
@@ -140,6 +145,10 @@ def _fallback_scenarios(customer, product):
         "needs_time": f"Absolutely, take your time, {name} ji. Shall I schedule a quick follow-up call next week that suits you?",
         "competitor_offer": f"Thanks for sharing that, {name} ji. Let me match that against our offer point by point so you can decide fairly.",
         "trust_concern": f"I completely understand, {name} ji. EXL Bank has served you since {customer.get('relationship_since', 'years')}, and I'm here to help — no pressure at all.",
+        "busy_callback": f"I completely understand, {name} ji. Your time is valuable. May I call you back on Saturday morning, or should I just WhatsApp you a 1-minute summary now?",
+        "eligibility_doubt": f"Don't worry about the paperwork, {name} ji. Since you're a pre-selected customer, we need zero physical documents. It's 100% paperless.",
+        "digital_hesitation": f"I completely respect that, {name} ji. If you prefer, I can block a priority slot for you at our nearest branch, or I can guide you through our secure official app right now in 2 minutes.",
+        "benefit_calculation": f"To give you an idea, {name} ji, this product could save you up to Rs. 15,000 annually based on your typical transaction size. I can run the exact math for you in 30 seconds."
     }
     for i, (key, label) in enumerate(SCENARIO_LABELS.items()):
         out.append({"scenario_key": key, "title": label, "trigger_hint": label, "content": texts[key]})

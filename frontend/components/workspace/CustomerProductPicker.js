@@ -1,7 +1,7 @@
 "use client";
 import { Users, Package, Languages } from "lucide-react";
 import { useWorkspace } from "@/components/WorkspaceContext";
-import { Select } from "@/components/ui";
+import { SearchableSelect, Select } from "@/components/ui";
 import { TabSwitcher } from "./TabSwitcher";
 
 /**
@@ -16,7 +16,7 @@ export function CustomerProductPicker() {
       <div className="px-4 py-2.5 flex flex-wrap items-center gap-2.5">
         <div className="flex items-center gap-1.5 min-w-[200px] flex-1">
           <Users className="h-4 w-4 text-slate-400 shrink-0" />
-          <Select
+          <SearchableSelect
             value={customerId}
             onChange={setCustomerId}
             placeholder="Select customer…"
@@ -26,7 +26,7 @@ export function CustomerProductPicker() {
         </div>
         <div className="flex items-center gap-1.5 min-w-[180px] flex-1">
           <Package className="h-4 w-4 text-slate-400 shrink-0" />
-          <Select
+          <SearchableSelect
             value={productId}
             onChange={setProductId}
             placeholder="Select product…"

@@ -23,10 +23,13 @@ WHY THE MODEL RECOMMENDED THIS PRODUCT (use these as personalization hooks)
 {{reason_codes}}
 
 INSTRUCTIONS
-- Personalize every section using the customer's actual data (age, occupation, income, city, existing products, transaction behaviour, life stage). Never use generic filler.
-- Keep spoken lines natural and short so the agent can say them out loud.
-- Be honest: do not invent guaranteed returns or hide charges. Respect the rules above.
-- Anchor benefits to the customer's real situation and the recommendation reasons.
+- PERSONALIZATION: Use the customer's actual data (age, occupation, income, city, existing products, transaction behavior, life stage) in almost every section. Never use generic filler or generic "VIP customer" phrases. Use specific details like "Since you've been running your retail business in Delhi" or "Based on your frequent utility bills on your credit card".
+- EXPERT SALES VOCABULARY & STYLE: Speak like an elite, consultative relationship manager. Start with a warm, relationship-centric opening (and add polite Hindi honorifics like "Ji" when appropriate for an Indian customer, e.g. "Rajesh Ji").
+- EXCLUSIVE POSITIONING: Position the product as a pre-approved, exclusive benefit unlocked by their excellent banking track record (CIBIL score, long relationship, employer tier, or transaction size) rather than a cold sales pitch.
+- BENEFIT HOOK: Don't just list product features; connect them to their immediate financial pain-point or goals (e.g. tax savings for high-income earners, reward optimization for high-spenders).
+- SOFT-CLOSE NUDGES: End sections or the pitch with low-friction, high-agreement calls to action (e.g., "Shall I share the key benefits brochure directly on your WhatsApp for a quick look, or do you have any quick questions on the interest rate?").
+- CONVERSATIONAL: Keep spoken sentences natural, engaging, and short enough to be read aloud comfortably.
+- HONESTY: Stay 100% compliant and transparent about fees, charges, and rates based on the product description. Do not fabricate rates or features.
 
 Return ONLY valid JSON with this exact shape:
 {

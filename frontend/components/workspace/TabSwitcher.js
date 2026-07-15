@@ -8,7 +8,6 @@ const TABS = [
   { key: "pitch", label: "Pitch", icon: FileText },
   { key: "eligibility", label: "Eligibility", icon: ShieldCheck },
   { key: "notes", label: "Notes & Follow-ups", icon: StickyNote },
-  { key: "messaging", label: "Messaging", icon: Send },
 ];
 
 export function TabSwitcher() {

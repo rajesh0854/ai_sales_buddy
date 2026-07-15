@@ -1,7 +1,9 @@
 "use client";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Loader2 } from "lucide-react";
+import { Loader2, ChevronDown, Search, X } from "lucide-react";
+
 
 export function Spinner({ className }) {
   return <Loader2 className={cn("animate-spin", className)} />;
@@ -100,6 +102,97 @@ export function Select({ value, onChange, options, placeholder, className }) {
         <option key={o.value ?? o} value={o.value ?? o}>{o.label ?? o}</option>
       ))}
     </select>
+  );
+}
+
+export function SearchableSelect({ value, onChange, options, placeholder, className }) {
+  const [open, setOpen] = useState(false);
+  const [search, setSearch] = useState("");
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (containerRef.current && !containerRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const selectedOption = options.find((o) => (o.value ?? o) === value);
+  const selectedLabel = selectedOption ? (selectedOption.label ?? selectedOption) : "";
+
+  const filteredOptions = options.filter((o) => {
+    const label = (o.label ?? o).toLowerCase();
+    return label.includes(search.toLowerCase());
+  });
+
+  return (
+    <div ref={containerRef} className="relative w-full z-20">
+      <button
+        type="button"
+        onClick={() => { setOpen(!open); setSearch(""); }}
+        className={cn(
+          "flex items-center justify-between w-full input appearance-none bg-white cursor-pointer py-1.5 text-sm text-left pr-2",
+          className
+        )}
+      >
+        <span className={cn("truncate", !selectedOption && "text-slate-400")}>
+          {selectedLabel || placeholder || "Select..."}
+        </span>
+        <ChevronDown className={cn("h-4 w-4 text-slate-400 shrink-0 ml-1.5 transition-transform", open && "rotate-180")} />
+      </button>
+
+      {open && (
+        <div className="absolute left-0 mt-1 w-full rounded-xl bg-white border border-slate-200 shadow-xl z-50 overflow-hidden flex flex-col max-h-60">
+          <div className="flex items-center gap-1.5 px-3 py-2 border-b border-slate-100 bg-slate-50">
+            <Search className="h-4 w-4 text-slate-400 shrink-0" />
+            <input
+              type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Search..."
+              className="w-full bg-transparent border-0 outline-none text-sm p-0 focus:ring-0 text-slate-800"
+              autoFocus
+            />
+            {search && (
+              <button type="button" onClick={() => setSearch("")} className="text-slate-400 hover:text-slate-600">
+                <X className="h-3.5 w-3.5" />
+              </button>
+            )}
+          </div>
+          <div className="overflow-y-auto flex-1 py-1 max-h-48">
+            {filteredOptions.length === 0 ? (
+              <div className="px-3 py-2 text-xs text-slate-400 text-center">No results found</div>
+            ) : (
+              filteredOptions.map((o) => {
+                const optVal = o.value ?? o;
+                const optLabel = o.label ?? o;
+                const active = optVal === value;
+                return (
+                  <button
+                    key={optVal}
+                    type="button"
+                    onClick={() => {
+                      onChange(optVal);
+                      setOpen(false);
+                      setSearch("");
+                    }}
+                    className={cn(
+                      "w-full text-left px-3 py-2 text-sm hover:bg-slate-50 transition-colors truncate",
+                      active ? "bg-brand-50 text-brand-700 font-semibold" : "text-slate-700"
+                    )}
+                  >
+                    {optLabel}
+                  </button>
+                );
+              })
+            )}
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
 

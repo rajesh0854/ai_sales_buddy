@@ -75,8 +75,8 @@ export function PitchPanel() {
   const { bySection, unmatched } = script ? mapScenariosToSections(script.script_content, script.scenarios || []) : { bySection: new Map(), unmatched: [] };
 
   return (
-    <div className="grid lg:grid-cols-3 gap-4">
-      <div className="lg:col-span-1 space-y-3">
+    <div className="grid lg:grid-cols-3 gap-4 h-full min-h-0">
+      <div className="lg:col-span-1 space-y-3 overflow-y-auto pr-1 max-h-full shrink-0">
         <Card>
           <div className="flex items-center gap-2 mb-3">
             <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-brand-500 to-amber-500 grid place-items-center text-white"><Wand2 className="h-4.5 w-4.5" /></div>
@@ -102,7 +102,7 @@ export function PitchPanel() {
         )}
       </div>
 
-      <div className="lg:col-span-2">
+      <div className="lg:col-span-2 overflow-y-auto h-full pr-1 pb-10">
         {loading ? (
           <Card className="space-y-2.5"><Skeleton className="h-8 w-2/3" />{[...Array(5)].map((_, i) => <Skeleton key={i} className="h-16" />)}</Card>
         ) : !script ? (

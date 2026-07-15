@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useCallback, useContext, useMemo, useRef, useState } from "react";
+import { createContext, useCallback, useContext, useMemo, useRef, useState, useEffect } from "react";
 import { api } from "@/lib/api";
 
 const WorkspaceContext = createContext(null);
@@ -10,6 +10,9 @@ export function WorkspaceProvider({ children }) {
   const [activeTab, setActiveTab] = useState("pitch");
   const [language, setLanguage] = useState("English");
   const [templateId, setTemplateId] = useState("");
+
+  const [customerDetails, setCustomerDetails] = useState(null);
+  const [loadingDetails, setLoadingDetails] = useState(false);
 
   const [customers, setCustomers] = useState([]);
   const [products, setProducts] = useState([]);
@@ -46,6 +49,18 @@ export function WorkspaceProvider({ children }) {
   const customer = useMemo(() => customers.find((c) => c.customer_id === customerId), [customers, customerId]);
   const product = useMemo(() => products.find((p) => p.product_id === productId), [products, productId]);
 
+  useEffect(() => {
+    if (!customerId) {
+      setCustomerDetails(null);
+      return;
+    }
+    setLoadingDetails(true);
+    api.customer360(customerId)
+      .then((data) => setCustomerDetails(data))
+      .catch(() => setCustomerDetails(null))
+      .finally(() => setLoadingDetails(false));
+  }, [customerId]);
+
   const value = useMemo(
     () => ({
       customerId, setCustomerId,
@@ -56,8 +71,10 @@ export function WorkspaceProvider({ children }) {
       customers, products, templates, languages, refDataLoaded,
       loadReferenceData,
       customer, product,
+      customerDetails, setCustomerDetails,
+      loadingDetails,
     }),
-    [customerId, productId, activeTab, language, templateId, customers, products, templates, languages, refDataLoaded, loadReferenceData, customer, product]
+    [customerId, productId, activeTab, language, templateId, customers, products, templates, languages, refDataLoaded, loadReferenceData, customer, product, customerDetails, loadingDetails]
   );
 
   return <WorkspaceContext.Provider value={value}>{children}</WorkspaceContext.Provider>;

@@ -1,5 +1,5 @@
 "use client";
-import { Suspense, useEffect, useRef } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { Topbar } from "@/components/Topbar";
 import { Skeleton } from "@/components/ui";
@@ -8,15 +8,15 @@ import { CustomerProductPicker } from "@/components/workspace/CustomerProductPic
 import { PitchPanel } from "@/components/workspace/PitchPanel";
 import { EligibilityPanel } from "@/components/workspace/EligibilityPanel";
 import { NotesPanel } from "@/components/workspace/NotesPanel";
-import { MessagingPanel } from "@/components/workspace/MessagingPanel";
+import { CustomerDetailsSidebar } from "@/components/workspace/CustomerDetailsSidebar";
 import { BlobBackground } from "@/components/motion/BlobBackground";
+import { cn } from "@/lib/utils";
 
-const TABS = ["pitch", "eligibility", "notes", "messaging"];
+const TABS = ["pitch", "eligibility", "notes"];
 const SUBTITLES = {
   pitch: "Generate a personalized, ready-to-speak sales script — with dynamic call controls built right in.",
   eligibility: "Validate a recommendation against product policy before you pitch.",
   notes: "Capture notes — AI turns them into intelligence, events and reminders.",
-  messaging: "Send personalized Email & WhatsApp messages to customers.",
 };
 
 function WorkspaceScreen() {
@@ -53,20 +53,38 @@ function WorkspaceScreen() {
     router.replace(`/workspace?${qs.toString()}`, { scroll: false });
   }, [ws.customerId, ws.productId, ws.activeTab]);
 
+  const [showDetails, setShowDetails] = useState(true);
+
   return (
-    <div>
-      <div className="sticky top-0 z-30">
+    <div className="h-screen flex flex-col overflow-hidden bg-[#f7f8fc]">
+      <div className="shrink-0 relative z-30">
         <div className="relative">
           <BlobBackground count={2} />
           <Topbar title="Call Workspace" subtitle={SUBTITLES[ws.activeTab]} />
         </div>
         <CustomerProductPicker />
       </div>
-      <div className="p-4">
-        {ws.activeTab === "pitch" && <PitchPanel />}
-        {ws.activeTab === "eligibility" && <EligibilityPanel />}
-        {ws.activeTab === "notes" && <NotesPanel />}
-        {ws.activeTab === "messaging" && <MessagingPanel />}
+      <div className="flex-1 min-h-0 flex relative">
+        <div className="flex-1 p-4 overflow-hidden relative">
+          <div className={cn("h-full", ws.activeTab === "pitch" ? "" : "hidden")}>
+            <PitchPanel />
+          </div>
+          <div className={cn("h-full", ws.activeTab === "eligibility" ? "" : "hidden")}>
+            <EligibilityPanel />
+          </div>
+          <div className={cn("h-full", ws.activeTab === "notes" ? "" : "hidden")}>
+            <NotesPanel />
+          </div>
+        </div>
+
+        {ws.customerId && (
+          <CustomerDetailsSidebar
+            show={showDetails}
+            onToggle={() => setShowDetails(!showDetails)}
+            details={ws.customerDetails}
+            loading={ws.loadingDetails}
+          />
+        )}
       </div>
     </div>
   );

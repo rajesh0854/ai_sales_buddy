@@ -24,15 +24,15 @@ export function EligibilityPanel() {
   const eligible = result?.verdict === "ELIGIBLE";
 
   return (
-    <div className="grid lg:grid-cols-3 gap-4">
-      <Card className="lg:col-span-1 h-fit">
+    <div className="grid lg:grid-cols-3 gap-4 h-full min-h-0">
+      <Card className="lg:col-span-1 h-fit shrink-0">
         <MagneticButton onClick={check} disabled={loading || !customerId || !productId} className="btn-primary w-full py-2.5">
           {loading ? <><Spinner className="h-4 w-4" /> Checking…</> : <><ShieldCheck className="h-4 w-4" /> Check eligibility</>}
         </MagneticButton>
         <p className="text-xs text-slate-400 mt-2.5">Uses the customer & product selected above to validate against product policy rules.</p>
       </Card>
 
-      <div className="lg:col-span-2">
+      <div className="lg:col-span-2 overflow-y-auto h-full pr-1 pb-10">
         {loading ? <Card><Skeleton className="h-56" /></Card> : !result ? (
           <Card className="h-full min-h-[320px] grid place-items-center">
             <EmptyState icon={ShieldCheck} title="Run an eligibility check" subtitle="Select a customer and product above to validate against the product's policy rules — with a plain-language explanation." />

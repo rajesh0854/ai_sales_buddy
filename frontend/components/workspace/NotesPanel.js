@@ -51,9 +51,9 @@ export function NotesPanel() {
   }
 
   return (
-    <div className="grid lg:grid-cols-3 gap-4">
-      <div className="lg:col-span-2 space-y-3">
-        <Card>
+    <div className="grid lg:grid-cols-3 gap-4 h-full min-h-0">
+      <div className="lg:col-span-2 flex flex-col h-full min-h-0 space-y-3">
+        <Card className="shrink-0">
           <div className="flex items-center gap-2 mb-2.5">
             <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-brand-500 to-amber-500 grid place-items-center text-white"><StickyNote className="h-4.5 w-4.5" /></div>
             <div><div className="font-semibold text-slate-800">New note</div><div className="text-xs text-slate-400">Logged against the customer selected above. AI extracts sentiment & schedules follow-ups automatically</div></div>
@@ -67,9 +67,9 @@ export function NotesPanel() {
           </div>
         </Card>
 
-        <div>
+        <div className="flex-1 min-h-0 flex flex-col">
           <SectionTitle title="Recent notes" />
-          <div className="space-y-2.5">
+          <div className="flex-1 overflow-y-auto pr-1 pb-6 space-y-2.5">
             {!notes ? [...Array(3)].map((_, i) => <Skeleton key={i} className="h-20" />) :
               notes.length === 0 ? <Card><EmptyState icon={StickyNote} title="No notes yet" subtitle="Your captured notes will appear here." /></Card> :
               notes.map((n, i) => {
@@ -103,9 +103,11 @@ export function NotesPanel() {
         </div>
       </div>
 
-      <div>
-        <SectionTitle title="Follow-ups & events" right={<Bell className="h-4 w-4 text-brand-500" />} />
-        <div className="space-y-2">
+      <div className="lg:col-span-1 flex flex-col h-full min-h-0">
+        <div className="shrink-0">
+          <SectionTitle title="Follow-ups & events" right={<Bell className="h-4 w-4 text-brand-500" />} />
+        </div>
+        <div className="flex-1 overflow-y-auto pr-1 pb-6 space-y-2">
           {followUps.length === 0 ? <Card><EmptyState icon={Calendar} title="No follow-ups" subtitle="AI-detected reminders show up here." /></Card> :
             followUps.map((f, i) => (
               <motion.div key={f.followup_id} initial={{ opacity: 0, x: 12 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: Math.min(i * 0.04, 0.3) }}>
