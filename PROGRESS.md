@@ -39,10 +39,37 @@ Plan reference: `C:\Users\vmuser\.claude\plans\project-requirement-txt-i-want-yo
 
 ---
 
-## Phase 2 — Backend Development (FastAPI)  ⬜ PENDING
-Setup (venv, requirements, .env, config, db, Gemini client) + routers/services:
-auth · customers+360+lead-prioritization · pitch generation · dynamic script controls · eligibility ·
-chatbot · notes/follow-ups · messaging · templates · feedback loop · compliance · analytics · vernacular.
+## Phase 2 — Backend Development (FastAPI)  ✅ COMPLETE
+
+**Foundation:**
+- ✅ venv + `requirements.txt` (installed: fastapi 0.139, google-genai 2.11, pydantic 2.13, uvicorn 0.51)
+  - Note: pinned versions were unpinned to latest — Python 3.14 lacked wheels for the old pinned pydantic-core.
+- ✅ `.env` / `.env.example`, `app/config.py`, `app/database.py` (dict rows, JSON auto-parse, id generator)
+- ✅ `app/llm/gemini_client.py` — google-genai wrapper (gemini-flash-lite-latest), JSON mode, **graceful fallback when no key**
+- ✅ `app/llm/prompts.py` + 10 prompt files in `backend/prompts/` (isolated, editable)
+- ✅ `app/main.py` — CORS + 13 routers
+
+**Routers/services (all verified live via curl):**
+- ✅ auth (`/api/auth/login`)
+- ✅ customers + Customer 360 + **smart lead priority-queue** (`/api/customers*`)
+- ✅ products (`/api/products*`)
+- ✅ pitch generation + **dynamic scenario branches** + single-scenario regenerate (`/api/pitch*`)
+- ✅ eligibility (rule engine + LLM explanation) (`/api/eligibility/check`)
+- ✅ chatbot (keyword Q&A, product comparison, suggested questions) (`/api/chatbot*`)
+- ✅ notes → AI intelligence → auto follow-ups w/ relative-date resolution (`/api/notes*`)
+- ✅ messaging (Email/WhatsApp generate + send) (`/api/messaging*`)
+- ✅ templates CRUD (`/api/templates*`)
+- ✅ feedback capture + AI improvement guide synthesis (`/api/feedback*`)
+- ✅ compliance & mis-selling guardrails (`/api/compliance*`)
+- ✅ analytics dashboard KPIs/charts/leaderboard (`/api/analytics/dashboard`)
+- ✅ meta (languages for vernacular, gemini status) (`/api/meta*`)
+
+**Vernacular:** `language` param flows through pitch / chatbot / messaging → Gemini generates in the chosen Indian language.
+
+**Run:** `cd backend && venv/Scripts/uvicorn app.main:app --port 8000` · Swagger at `/docs`
+**Verified:** login, 360, priority queue (Hot/Warm/Cool bands), pitch+scenarios+compliance, eligibility rules,
+chatbot keyword Q&A, notes→followup (resolved "next week"→2026-07-22), messaging, comparison, analytics KPIs, improvement guide.
+**Pending user action:** add `GEMINI_API_KEY` to `backend/.env` to enable real LLM output (fallbacks used until then).
 
 ## Phase 3 — Frontend Development (Next.js)  ⬜ PENDING
 9 screens: landing/login · dashboard · customer 360 · pitch studio · eligibility · chatbot ·
