@@ -64,7 +64,7 @@ export default function TemplatesPage() {
                 <Card>
                   <div className="flex items-start justify-between">
                     <div className="flex items-start gap-3">
-                      <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-brand-500 to-violet-500 grid place-items-center text-white"><LayoutTemplate className="h-5 w-5" /></div>
+                      <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-brand-500 to-amber-500 grid place-items-center text-white"><LayoutTemplate className="h-5 w-5" /></div>
                       <div>
                         <div className="flex items-center gap-2"><h3 className="font-semibold text-slate-800">{t.name}</h3>{t.is_default === 1 && <Badge className="bg-brand-50 text-brand-600"><Star className="h-3 w-3 fill-brand-400" /> Default</Badge>}</div>
                         <p className="text-sm text-slate-500 mt-0.5">{t.description}</p>
@@ -87,7 +87,7 @@ export default function TemplatesPage() {
 
         {/* Improvement guides */}
         <div>
-          <Card className="bg-gradient-to-br from-brand-600 to-violet-600 text-white mb-4">
+          <Card className="bg-gradient-to-br from-brand-600 to-amber-600 text-white mb-4">
             <div className="flex items-center gap-2 mb-2"><Lightbulb className="h-5 w-5" /><span className="font-semibold">AI Improvement Engine</span></div>
             <p className="text-sm text-white/80 mb-3">Analyse agent feedback and generate concrete suggestions to fold back into templates.</p>
             <button onClick={generateGuide} disabled={genGuide} className="btn bg-white text-brand-700 px-4 py-2.5 text-sm w-full hover:bg-brand-50">

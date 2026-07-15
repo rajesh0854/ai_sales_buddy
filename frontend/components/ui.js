@@ -35,7 +35,7 @@ export function SectionTitle({ title, subtitle, right }) {
 
 export function StatCard({ icon: Icon, label, value, sub, accent = "brand", delay = 0 }) {
   const accents = {
-    brand: "from-brand-500 to-violet-500",
+    brand: "from-brand-500 to-amber-500",
     emerald: "from-emerald-500 to-teal-500",
     amber: "from-amber-500 to-orange-500",
     rose: "from-rose-500 to-pink-500",
@@ -86,7 +86,7 @@ export function Avatar({ name, seed, size = "md", gradient }) {
   const sizes = { sm: "h-8 w-8 text-xs", md: "h-10 w-10 text-sm", lg: "h-12 w-12 text-base", xl: "h-16 w-16 text-lg" };
   const ini = (name || seed || "?").split(" ").filter(Boolean).slice(0, 2).map((w) => w[0]).join("").toUpperCase();
   return (
-    <div className={cn("rounded-full bg-gradient-to-br grid place-items-center text-white font-semibold shadow-soft shrink-0", sizes[size], gradient || "from-brand-500 to-violet-500")}>
+    <div className={cn("rounded-full bg-gradient-to-br grid place-items-center text-white font-semibold shadow-soft shrink-0", sizes[size], gradient || "from-brand-500 to-amber-500")}>
       {ini}
     </div>
   );
@@ -103,7 +103,7 @@ export function Select({ value, onChange, options, placeholder, className }) {
   );
 }
 
-export function ProgressRing({ value = 0, size = 44, stroke = 4, color = "#6366f1" }) {
+export function ProgressRing({ value = 0, size = 44, stroke = 4, color = "#FB4E0B" }) {
   const r = (size - stroke) / 2;
   const c = 2 * Math.PI * r;
   const off = c - (value / 100) * c;

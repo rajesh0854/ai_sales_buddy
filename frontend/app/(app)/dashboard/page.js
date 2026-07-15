@@ -16,7 +16,7 @@ import { api } from "@/lib/api";
 import { getUser } from "@/lib/auth";
 import { formatINR, segmentStyle, bandStyle, cn } from "@/lib/utils";
 
-const PIE_COLORS = ["#6366f1", "#8b5cf6", "#10b981", "#f59e0b", "#ec4899"];
+const PIE_COLORS = ["#FB4E0B", "#8b5cf6", "#10b981", "#f59e0b", "#ec4899"];
 
 export default function DashboardPage() {
   const [data, setData] = useState(null);
@@ -146,8 +146,8 @@ export default function DashboardPage() {
                   <XAxis dataKey="category" tick={{ fontSize: 10, fill: "#94a3b8" }} interval={0} angle={-18} textAnchor="end" height={50} />
                   <YAxis tick={{ fontSize: 11, fill: "#94a3b8" }} />
                   <Tooltip contentStyle={{ borderRadius: 12, border: "1px solid #eef1f6", boxShadow: "0 8px 30px -8px rgba(16,24,40,0.15)" }} />
-                  <Bar dataKey="total" name="Recommended" fill="#c7d2fe" radius={[6, 6, 0, 0]} />
-                  <Bar dataKey="converted" name="Converted" fill="#6366f1" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="total" name="Recommended" fill="#FFC49D" radius={[6, 6, 0, 0]} />
+                  <Bar dataKey="converted" name="Converted" fill="#FB4E0B" radius={[6, 6, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             ) : <Skeleton className="h-64" />}
@@ -160,15 +160,15 @@ export default function DashboardPage() {
                 <AreaChart data={data.feedback_trend} margin={{ left: -18 }}>
                   <defs>
                     <linearGradient id="ratingGrad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#6366f1" stopOpacity={0.35} />
-                      <stop offset="100%" stopColor="#6366f1" stopOpacity={0} />
+                      <stop offset="0%" stopColor="#FB4E0B" stopOpacity={0.35} />
+                      <stop offset="100%" stopColor="#FB4E0B" stopOpacity={0} />
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#eef1f6" />
                   <XAxis dataKey="month" tick={{ fontSize: 11, fill: "#94a3b8" }} />
                   <YAxis domain={[0, 5]} tick={{ fontSize: 11, fill: "#94a3b8" }} />
                   <Tooltip contentStyle={{ borderRadius: 12, border: "1px solid #eef1f6" }} />
-                  <Area type="monotone" dataKey="avg_rating" stroke="#6366f1" strokeWidth={2.5} fill="url(#ratingGrad)" />
+                  <Area type="monotone" dataKey="avg_rating" stroke="#FB4E0B" strokeWidth={2.5} fill="url(#ratingGrad)" />
                 </AreaChart>
               </ResponsiveContainer>
             ) : <Skeleton className="h-64" />}

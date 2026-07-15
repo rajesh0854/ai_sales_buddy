@@ -79,7 +79,7 @@ export function PitchPanel() {
       <div className="lg:col-span-1 space-y-3">
         <Card>
           <div className="flex items-center gap-2 mb-3">
-            <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-brand-500 to-violet-500 grid place-items-center text-white"><Wand2 className="h-4.5 w-4.5" /></div>
+            <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-brand-500 to-amber-500 grid place-items-center text-white"><Wand2 className="h-4.5 w-4.5" /></div>
             <div><div className="font-semibold text-slate-800">Configure</div><div className="text-xs text-slate-400">Template & generate</div></div>
           </div>
           <div className="space-y-2.5">

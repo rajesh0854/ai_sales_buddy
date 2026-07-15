@@ -47,7 +47,7 @@ export default function Customer360Page() {
         {/* Profile header */}
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}>
           <Card className="relative overflow-hidden">
-            <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-r from-brand-600 to-violet-600" />
+            <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-r from-brand-600 to-amber-600" />
             <div className="relative pt-8">
               <div className="flex flex-col sm:flex-row sm:items-end gap-4">
                 <div className="ring-4 ring-white rounded-full">
@@ -164,7 +164,7 @@ export default function Customer360Page() {
                     <div key={s.category}>
                       <div className="flex justify-between text-sm mb-1"><span className="text-slate-600">{s.category}</span><span className="font-medium text-slate-700">{formatINR(s.amount, { compact: true })}</span></div>
                       <div className="h-1.5 rounded-full bg-slate-100 overflow-hidden">
-                        <motion.div initial={{ width: 0 }} animate={{ width: `${(s.amount / max) * 100}%` }} transition={{ duration: 0.7, delay: i * 0.08 }} className="h-full rounded-full bg-gradient-to-r from-brand-500 to-violet-500" />
+                        <motion.div initial={{ width: 0 }} animate={{ width: `${(s.amount / max) * 100}%` }} transition={{ duration: 0.7, delay: i * 0.08 }} className="h-full rounded-full bg-gradient-to-r from-brand-500 to-amber-500" />
                       </div>
                     </div>
                   );

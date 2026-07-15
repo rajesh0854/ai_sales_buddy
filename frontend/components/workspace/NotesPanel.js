@@ -55,7 +55,7 @@ export function NotesPanel() {
       <div className="lg:col-span-2 space-y-3">
         <Card>
           <div className="flex items-center gap-2 mb-2.5">
-            <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-brand-500 to-violet-500 grid place-items-center text-white"><StickyNote className="h-4.5 w-4.5" /></div>
+            <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-brand-500 to-amber-500 grid place-items-center text-white"><StickyNote className="h-4.5 w-4.5" /></div>
             <div><div className="font-semibold text-slate-800">New note</div><div className="text-xs text-slate-400">Logged against the customer selected above. AI extracts sentiment & schedules follow-ups automatically</div></div>
           </div>
           <div className="space-y-2.5">
@@ -120,7 +120,7 @@ export function NotesPanel() {
                       <div className="flex items-center gap-2 mt-2 flex-wrap">
                         <span className="chip bg-slate-100 text-slate-500 text-[11px]"><Calendar className="h-3 w-3" />{f.due_date}</span>
                         {f.due_time && <span className="chip bg-slate-100 text-slate-500 text-[11px]"><Clock className="h-3 w-3" />{f.due_time}</span>}
-                        <span className={cn("chip text-[11px]", f.type === "Callback" ? "bg-brand-50 text-brand-600" : "bg-violet-50 text-violet-600")}>
+                        <span className={cn("chip text-[11px]", f.type === "Callback" ? "bg-brand-50 text-brand-600" : "bg-amber-50 text-amber-700")}>
                           {f.type === "Callback" && <Phone className="h-3 w-3" />}{f.type}
                         </span>
                       </div>

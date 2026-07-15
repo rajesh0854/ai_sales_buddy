@@ -19,7 +19,7 @@ export default function AppLayout({ children }) {
   if (!ready) {
     return (
       <div className="min-h-screen grid place-items-center bg-mesh">
-        <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-brand-600 to-violet-600 animate-pulse" />
+        <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-brand-600 to-amber-500 animate-pulse" />
       </div>
     );
   }

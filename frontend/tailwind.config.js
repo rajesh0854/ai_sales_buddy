@@ -9,9 +9,10 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          50: "#eef2ff", 100: "#e0e7ff", 200: "#c7d2fe", 300: "#a5b4fc",
-          400: "#818cf8", 500: "#6366f1", 600: "#4f46e5", 700: "#4338ca",
-          800: "#3730a3", 900: "#312e81",
+          // EXL orange — 600 is the exact color sampled from the EXL logo mark.
+          50: "#FFF4ED", 100: "#FFE4D2", 200: "#FFC49D", 300: "#FF9F66",
+          400: "#FF7A3D", 500: "#FF5A1F", 600: "#FB4E0B", 700: "#D64200",
+          800: "#A83300", 900: "#7A2500",
         },
         accent: {
           50: "#ecfdf5", 100: "#d1fae5", 400: "#34d399", 500: "#10b981", 600: "#059669",

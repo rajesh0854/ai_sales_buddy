@@ -83,7 +83,7 @@ export function ChatbotDrawer() {
       <motion.button
         onClick={() => setOpen(true)}
         initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.5, type: "spring" }}
-        className="fixed bottom-6 right-6 z-40 h-14 w-14 rounded-2xl bg-gradient-to-br from-brand-600 to-violet-600 text-white shadow-glow grid place-items-center hover:scale-105 transition-transform"
+        className="fixed bottom-6 right-6 z-40 h-14 w-14 rounded-2xl bg-gradient-to-br from-brand-600 to-amber-500 text-white shadow-glow grid place-items-center hover:scale-105 transition-transform"
       >
         <Bot className="h-6 w-6" />
         <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-emerald-400 ring-2 ring-white grid place-items-center">
@@ -102,7 +102,7 @@ export function ChatbotDrawer() {
               className="fixed right-0 top-0 bottom-0 w-full sm:w-[440px] bg-white z-50 shadow-2xl flex flex-col"
             >
               {/* header */}
-              <div className="p-4 border-b border-slate-100 bg-gradient-to-br from-brand-600 to-violet-600 text-white">
+              <div className="p-4 border-b border-slate-100 bg-gradient-to-br from-brand-600 to-amber-600 text-white">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <div className="h-9 w-9 rounded-xl bg-white/20 grid place-items-center"><Bot className="h-5 w-5" /></div>

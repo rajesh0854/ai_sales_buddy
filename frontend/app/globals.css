@@ -50,14 +50,14 @@ html, body {
 
 /* gradient text */
 .text-gradient {
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #6366f1 100%);
+  background: linear-gradient(135deg, #FB4E0B 0%, #FF9F00 50%, #FF5A1F 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradient-shimmer-text {
-  background: linear-gradient(90deg, #4f46e5, #ec4899, #f59e0b, #4f46e5);
+  background: linear-gradient(90deg, #FB4E0B, #FF9F00, #FF5A1F, #FB4E0B);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -90,9 +90,9 @@ html, body {
 @keyframes shimmer { 100% { transform: translateX(100%); } }
 
 .bg-mesh {
-  background-color: #f7f8fc;
+  background-color: #fffaf6;
   background-image:
-    radial-gradient(at 0% 0%, rgba(99,102,241,0.12) 0px, transparent 50%),
-    radial-gradient(at 98% 2%, rgba(124,58,237,0.10) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, rgba(251,78,11,0.14) 0px, transparent 50%),
+    radial-gradient(at 98% 2%, rgba(255,159,0,0.12) 0px, transparent 50%),
     radial-gradient(at 50% 100%, rgba(16,185,129,0.08) 0px, transparent 50%);
 }

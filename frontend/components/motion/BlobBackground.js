@@ -2,8 +2,8 @@
 import { cn } from "@/lib/utils";
 
 const PALETTES = {
-  brand: ["bg-brand-400", "bg-fuchsia-400", "bg-amber-300"],
-  cool: ["bg-sky-400", "bg-violet-400", "bg-emerald-300"],
+  brand: ["bg-brand-400", "bg-amber-300", "bg-brand-200"],
+  warm: ["bg-amber-300", "bg-brand-300", "bg-rose-200"],
 };
 
 /**

@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
  * Rotating conic-gradient border ring around its children (masked so only
  * the border shows). Use to highlight a "top pick" badge or an active chip.
  */
-export function GradientBorder({ children, className, borderWidth = 2, colors = "from-brand-500 via-fuchsia-500 to-amber-400", rounded = "rounded-2xl" }) {
+export function GradientBorder({ children, className, borderWidth = 2, colors = "from-brand-600 via-amber-400 to-brand-500", rounded = "rounded-2xl" }) {
   return (
     <div className={cn("relative isolate", rounded, className)} style={{ padding: borderWidth }}>
       <motion.div

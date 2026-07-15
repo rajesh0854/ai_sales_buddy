@@ -47,7 +47,7 @@ export default function LandingPage() {
       {/* floating blobs */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-brand-200/30 blur-3xl animate-float" />
-        <div className="absolute top-1/3 -right-24 h-80 w-80 rounded-full bg-violet-200/30 blur-3xl animate-float" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/3 -right-24 h-80 w-80 rounded-full bg-amber-200/30 blur-3xl animate-float" style={{ animationDelay: "2s" }} />
         <div className="absolute bottom-0 left-1/4 h-72 w-72 rounded-full bg-emerald-200/20 blur-3xl animate-float" style={{ animationDelay: "4s" }} />
       </div>
 
@@ -88,7 +88,7 @@ export default function LandingPage() {
                 variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0 } }}
                 className="flex items-start gap-3 rounded-2xl bg-white/70 backdrop-blur border border-white/80 p-3.5 shadow-soft"
               >
-                <div className="h-9 w-9 rounded-lg bg-gradient-to-br from-brand-500 to-violet-500 grid place-items-center text-white shrink-0">
+                <div className="h-9 w-9 rounded-lg bg-gradient-to-br from-brand-500 to-amber-500 grid place-items-center text-white shrink-0">
                   <f.icon className="h-4.5 w-4.5" />
                 </div>
                 <div>
