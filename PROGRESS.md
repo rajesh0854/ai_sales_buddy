@@ -71,9 +71,52 @@ Plan reference: `C:\Users\vmuser\.claude\plans\project-requirement-txt-i-want-yo
 chatbot keyword Q&A, notes→followup (resolved "next week"→2026-07-22), messaging, comparison, analytics KPIs, improvement guide.
 **Pending user action:** add `GEMINI_API_KEY` to `backend/.env` to enable real LLM output (fallbacks used until then).
 
-## Phase 3 — Frontend Development (Next.js)  ⬜ PENDING
-9 screens: landing/login · dashboard · customer 360 · pitch studio · eligibility · chatbot ·
-notes/follow-ups · messaging · templates admin.
+## Phase 3 — Frontend Development (Next.js)  ✅ COMPLETE
 
-## Phase 4 — UI/UX Verification & Polish  ⬜ PENDING
-Browser drive-through, screenshots, white-theme consistency, animation polish, flawless E2E flows.
+**Stack:** Next.js 14.2 (App Router, JS) + Tailwind 3.4 + Framer Motion 11 + Recharts 2 + lucide-react. White theme.
+**Config:** `NEXT_PUBLIC_API_URL` from `.env.local` (central client in `lib/api.js`, never hardcoded).
+
+**Foundation:**
+- ✅ `app/globals.css` (design system: buttons, cards, inputs, gradients, skeleton shimmer, mesh bg)
+- ✅ `tailwind.config.js` (brand/accent palette, shadows, animations)
+- ✅ `lib/api.js` (all endpoints), `lib/utils.js` (INR/segment/band formatting), `lib/auth.js` (localStorage session)
+- ✅ components: Logo, Sidebar (animated active pill), Topbar (user menu + demo-mode badge), ui.js
+     (Card/StatCard/Badge/Avatar/ProgressRing/Skeleton/EmptyState/Select), Toast, ChatbotDrawer (global co-pilot)
+
+**Screens (all compile & wired to backend):**
+- ✅ Landing + Login (`app/page.js`) — animated hero, floating blobs, feature grid, demo-login quick-fill
+- ✅ Dashboard (`/dashboard`) — KPI stat cards, smart lead queue, segment donut, follow-ups, product/rating charts, pipeline, leaderboard
+- ✅ Customers list (`/customers`) — search + segment filter, animated cards
+- ✅ Customer 360 (`/customers/[id]`) — profile header, KPIs, ranked recos w/ propensity rings, txn area chart, holdings (own vs competitor), quick actions
+- ✅ Pitch Studio (`/pitch`) — config panel, generated sections, **dynamic call-control chips (switch + regenerate)**, compliance badge+flags, star feedback
+- ✅ Eligibility (`/eligibility`) — verdict card, per-rule pass/fail, reasons, suggestions
+- ✅ Notes & Follow-ups (`/notes`) — compose→AI sentiment/summary, auto follow-up list w/ complete toggle
+- ✅ Messaging (`/messaging`) — Email & WhatsApp channel toggle, live preview, copy/send
+- ✅ Templates & Improvement (`/templates`) — template CRUD modal + AI improvement-guide generation
+- ✅ Chatbot co-pilot — global floating drawer: keyword Q&A, product comparison, suggested-question chips, copy-to-speak
+
+**Run:** `cd frontend && npm run dev` (port 3000). Both servers verified up; all 10 routes return 200 and compile without errors.
+
+## Phase 4 — UI/UX Verification & Polish  ✅ COMPLETE
+
+Drove the running app in a real browser (Chromium preview) and verified end-to-end:
+- ✅ **Login** → session saved → redirect to dashboard (handler chain verified)
+- ✅ **Dashboard** — KPI cards, smart lead queue (Hot/Warm/Cool), segment donut, follow-ups, 3 Recharts charts (correct 130/509×280 dims), pipeline bars, leaderboard. Layout: sidebar 256px + main 1174px, all 11 cards present.
+- ✅ **Customers list** — 50 cards render, search/filter, white cards (radius 16px), body bg `#f7f8fc`
+- ✅ **Customer 360** — profile, propensity rings, transaction area chart, competitor win-back chips
+- ✅ **Pitch Studio** — full generate flow: title + 7 sections + 6 dynamic control chips + expand/regenerate + compliance badge + star feedback
+- ✅ **Eligibility** — ELIGIBLE verdict, 7 rule rows, headline/explanation
+- ✅ **Notes** — 20 seeded notes + sentiment chips + compose
+- ✅ **Messaging** — personalized email preview + send
+- ✅ **Templates** — 3 templates, CRUD modal, improvement-guide generation
+- ✅ **Chatbot co-pilot** — opens on every page, suggestion chips, keyword Q&A answer + copy-to-speak
+
+**No console errors** across any page. White theme + Framer Motion animations + gradients consistent (shared component library).
+**Harness note:** the preview screenshot tool downscales very tall pages (cosmetic capture limitation); verified layouts via DOM/computed-style inspection which the tooling recommends as more accurate. Dashboard captured cleanly and confirmed the visual design.
+
+---
+
+## ✅ ALL PHASES COMPLETE
+
+**Run:** backend `cd backend && venv/Scripts/uvicorn app.main:app --port 8000` · frontend `cd frontend && npm run dev` → http://localhost:3000
+**Only pending user action:** add `GEMINI_API_KEY` to `backend/.env` for real LLM output (demo-mode fallbacks work without it). See `README.md`.
