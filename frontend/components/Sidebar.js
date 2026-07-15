@@ -3,8 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import {
-  LayoutDashboard, Users, FileText, ShieldCheck, StickyNote,
-  Send, LayoutTemplate, Sparkles,
+  LayoutDashboard, Users, Zap, LayoutTemplate, Sparkles,
 } from "lucide-react";
 import { Logo } from "./Logo";
 import { cn } from "@/lib/utils";
@@ -12,10 +11,7 @@ import { cn } from "@/lib/utils";
 const NAV = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/customers", label: "Customers", icon: Users },
-  { href: "/pitch", label: "Pitch Studio", icon: FileText },
-  { href: "/eligibility", label: "Eligibility", icon: ShieldCheck },
-  { href: "/notes", label: "Notes & Follow-ups", icon: StickyNote },
-  { href: "/messaging", label: "Messaging", icon: Send },
+  { href: "/workspace", label: "Call Workspace", icon: Zap },
   { href: "/templates", label: "Templates", icon: LayoutTemplate },
 ];
 

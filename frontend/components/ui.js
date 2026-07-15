@@ -7,9 +7,11 @@ export function Spinner({ className }) {
   return <Loader2 className={cn("animate-spin", className)} />;
 }
 
-export function Card({ className, children, hover = false, ...props }) {
+const CARD_SIZES = { sm: "p-3.5", md: "p-4", lg: "p-5" };
+
+export function Card({ className, children, hover = false, size = "md", ...props }) {
   return (
-    <div className={cn("card p-5", hover && "transition-all hover:shadow-glow hover:-translate-y-0.5", className)} {...props}>
+    <div className={cn("card", CARD_SIZES[size] || CARD_SIZES.md, hover && "transition-all hover:shadow-glow hover:-translate-y-0.5", className)} {...props}>
       {children}
     </div>
   );

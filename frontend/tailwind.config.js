@@ -33,10 +33,18 @@ module.exports = {
         "fade-up": { "0%": { opacity: 0, transform: "translateY(12px)" }, "100%": { opacity: 1, transform: "translateY(0)" } },
         shimmer: { "100%": { transform: "translateX(100%)" } },
         float: { "0%,100%": { transform: "translateY(0)" }, "50%": { transform: "translateY(-10px)" } },
+        "gradient-pan": { "0%": { backgroundPosition: "0% 50%" }, "100%": { backgroundPosition: "200% 50%" } },
+        "blob-float": {
+          "0%,100%": { transform: "translate(0,0) scale(1)" },
+          "33%": { transform: "translate(4%,-6%) scale(1.08)" },
+          "66%": { transform: "translate(-3%,4%) scale(0.95)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out both",
         float: "float 6s ease-in-out infinite",
+        "gradient-pan": "gradient-pan 3s linear infinite",
+        "blob-float": "blob-float 14s ease-in-out infinite",
       },
     },
   },

@@ -33,16 +33,16 @@ html, body {
     @apply inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
   }
   .btn-primary {
-    @apply btn bg-brand-600 text-white px-4 py-2.5 hover:bg-brand-700 shadow-soft hover:shadow-glow active:scale-[0.98];
+    @apply btn bg-brand-600 text-white px-3.5 py-2 hover:bg-brand-700 shadow-soft hover:shadow-glow active:scale-[0.98];
   }
   .btn-ghost {
-    @apply btn bg-white text-slate-700 px-4 py-2.5 border border-slate-200 hover:bg-slate-50 hover:border-slate-300;
+    @apply btn bg-white text-slate-700 px-3.5 py-2 border border-slate-200 hover:bg-slate-50 hover:border-slate-300;
   }
   .btn-soft {
-    @apply btn bg-brand-50 text-brand-700 px-4 py-2.5 hover:bg-brand-100;
+    @apply btn bg-brand-50 text-brand-700 px-3.5 py-2 hover:bg-brand-100;
   }
   .input {
-    @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-slate-800 placeholder-slate-400 outline-none transition-all focus:border-brand-400 focus:ring-4 focus:ring-brand-100;
+    @apply w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2 text-slate-800 placeholder-slate-400 outline-none transition-all focus:border-brand-400 focus:ring-4 focus:ring-brand-100;
   }
   .label { @apply block text-sm font-medium text-slate-600 mb-1.5; }
   .chip { @apply inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-medium; }
@@ -54,6 +54,23 @@ html, body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.gradient-shimmer-text {
+  background: linear-gradient(90deg, #4f46e5, #ec4899, #f59e0b, #4f46e5);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-pan 3s linear infinite;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(60px);
+  opacity: 0.35;
+  pointer-events: none;
 }
 
 /* shimmer skeleton */

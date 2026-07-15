@@ -66,9 +66,9 @@ export default function Customer360Page() {
                   </div>
                 </div>
                 <div className="flex gap-2">
-                  <Link href={`/pitch?customer=${c.customer_id}`} className="btn-primary text-sm"><FileText className="h-4 w-4" /> Generate Pitch</Link>
-                  <Link href={`/eligibility?customer=${c.customer_id}`} className="btn-ghost text-sm"><ShieldCheck className="h-4 w-4" /></Link>
-                  <Link href={`/messaging?customer=${c.customer_id}`} className="btn-ghost text-sm"><Send className="h-4 w-4" /></Link>
+                  <Link href={`/workspace?customer=${c.customer_id}&tab=pitch`} className="btn-primary text-sm"><FileText className="h-4 w-4" /> Generate Pitch</Link>
+                  <Link href={`/workspace?customer=${c.customer_id}&tab=eligibility`} className="btn-ghost text-sm"><ShieldCheck className="h-4 w-4" /></Link>
+                  <Link href={`/workspace?customer=${c.customer_id}&tab=messaging`} className="btn-ghost text-sm"><Send className="h-4 w-4" /></Link>
                 </div>
               </div>
 
@@ -116,7 +116,7 @@ export default function Customer360Page() {
                             </div>
                             <div className="text-xs text-slate-400">{r.product_category} · Expected value {formatINR(r.expected_value, { compact: true })}</div>
                           </div>
-                          <Link href={`/pitch?customer=${c.customer_id}&product=${r.product_id}`} className="btn-soft text-xs shrink-0">Pitch <FileText className="h-3.5 w-3.5" /></Link>
+                          <Link href={`/workspace?customer=${c.customer_id}&product=${r.product_id}&tab=pitch`} className="btn-soft text-xs shrink-0">Pitch <FileText className="h-3.5 w-3.5" /></Link>
                         </div>
                         <div className="flex flex-wrap gap-1 mt-2">
                           {(r.reason_codes || []).map((code, j) => (

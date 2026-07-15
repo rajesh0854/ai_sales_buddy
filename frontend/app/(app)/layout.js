@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { Sidebar } from "@/components/Sidebar";
 import { ChatbotDrawer } from "@/components/ChatbotDrawer";
 import { ToastProvider } from "@/components/Toast";
+import { WorkspaceProvider } from "@/components/WorkspaceContext";
 import { getUser } from "@/lib/auth";
 
 export default function AppLayout({ children }) {
@@ -25,11 +26,13 @@ export default function AppLayout({ children }) {
 
   return (
     <ToastProvider>
-      <div className="flex min-h-screen bg-[#f7f8fc]">
-        <Sidebar />
-        <div className="flex-1 min-w-0">{children}</div>
-        <ChatbotDrawer />
-      </div>
+      <WorkspaceProvider>
+        <div className="flex min-h-screen bg-[#f7f8fc]">
+          <Sidebar />
+          <div className="flex-1 min-w-0">{children}</div>
+          <ChatbotDrawer />
+        </div>
+      </WorkspaceProvider>
     </ToastProvider>
   );
 }

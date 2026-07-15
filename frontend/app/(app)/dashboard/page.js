@@ -116,7 +116,7 @@ export default function DashboardPage() {
             </Card>
 
             <Card>
-              <SectionTitle title="Today's follow-ups" right={<Link href="/notes" className="text-sm text-brand-600 font-medium">All</Link>} />
+              <SectionTitle title="Today's follow-ups" right={<Link href="/workspace?tab=notes" className="text-sm text-brand-600 font-medium">All</Link>} />
               <div className="space-y-2">
                 {followUps.length === 0 ? (
                   <p className="text-sm text-slate-400 py-3 text-center">No pending follow-ups 🎉</p>

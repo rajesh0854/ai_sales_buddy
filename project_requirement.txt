@@ -121,3 +121,20 @@ phase 4 - verify ui design, styling to make sure its the BEST.
 create a detailed plan for each of the above phases. if you think above phase plan is not good, feel free to modify it.
 whatver you implement, keep track in a file such as in every phase what is implments, what needs to be implment, etc so that it will
 guide you to make sure you are in sync and right track.
+
+
+------------------
+application is working properly without any issues but the current applciation is NOT THE BEST.
+there are many changes required:
+1. the ui design and styling looks normal and its not creatively created. its just like other normal apps. BUT i want to create the
+THE BEST app which no one ever created.
+2. space utilization in the ui is very bad. some componets looking too big. overall i had to reduce page zoom to 90% to see properly.
+3. another biggest issue: if i want to either create a pitch, or eligibility check or notes & followup, or messaging, i need to select user and other options from dropdown
+which is not at all user friendly. within the same page may be from pitch studio, user should be able to select customer and product info, generate pitch, eligibility check, messging, taking notes should be done.
+because navigating to different page while speaking to customer is very difficult. that is the reason i want you to be very creative
+and create a best ui. plesae rethink and help me make this app BEST of ALL TIME.
+4.dynamic scripts control should be part of script isstead of keeping it in a separate section. see where different scenarios could occur and there add dynamic
+script controls so that, it will be helpfull to sales agent.
+
+5. overall the ui is not so creative and stunning. its just like other normal apps. also i dont see any cool animations.
+i suggest you to use react bits component wherver is possible.
